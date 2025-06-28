@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MokaWeb - MoKaPop</title>
+    <link rel="shortcut icon" href="./img/mokap-ico.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+        body {
+            font-family: "Ubuntu", serif;
+            background-color: #effdff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Reset básico */
+        * {
+          box-sizing: border-box;
+        }
+
+        header {
+            margin: 3rem;
+            background: #14878b;
+            padding: 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 20px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        .hedweb {
+            display: flex;
+            align-items: center;
+        }
+
+        .hedweb img {
+                height: 50px;
+                width: auto;
+        }
+
+        .hedweb a {
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 20px;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .hedweb span {
+            font-weight: 300;
+        }
+
+        .ico-hed i {
+            color: #14878b;
+            background: aliceblue;
+            padding: 1rem;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .ico-hed i:hover{
+            color: #dc0000; /* Cambia este color según el contraste que desees */
+        }
+
+        .user-inf {
+            background: #effdff;
+            padding: 0 20px;
+            border-radius: 20px;
+        }
+
+        .user-inf p {
+            color: #14878b;
+        }
+
+        .user-inf span {
+            color: #03494c;
+            font-weight: 500;
+        }
+
+        .general {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu {
+            margin: 0 3rem;
+            width: 200px;
+            background: #14878b;
+            padding: 1rem;
+            border-radius: 20px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+
+        .menu h1 {
+            text-align: center;
+            color: #14878b;
+            border-radius: 20px;
+            background: aliceblue;
+            padding: 10px;
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0 1rem;
+
+        }
+
+        .menu li {
+            margin-bottom: 12px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: 400;
+            font-size: 18px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #03494c; 
+        }
+
+        /*section tag-puntos*/
+        .tag-puntos {
+            margin: 3rem;
+        }
+
+        .puntos {
+            background: #03494c;
+            padding: 1rem;
+            width: 200px;
+            border-radius: 20px;
+            color: white;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+
+        .puntos h2 {
+            font-size: 18px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .puntos p {
+            text-align: center;
+            background: #effdff;
+            padding: 10px;
+            border-radius: 20px;
+            color: #03494c;
+            font-weight: 500;
+        }
+
+        /*footer*/
+        footer {
+            margin: 3rem;
+            background: #14878b;
+            padding: 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+        .i-pago {
+            color: #14878b;
+            background: #ffffff;
+            padding: 1rem;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hedweb">
+            <img src="./img/mokap-ico.png" alt="MOKAPOP-LOG">
+            <a href="./dashboard.html">MoKaPop - <span>PopWeb</span></a>
+        </div>
+
+        <div class="user-inf">
+            <p>¡Hola!, <span>Abraham Hazbum</span></p>
+        </div>
+
+        <div class="ico-hed">
+            <i class="fa-solid fa-location-dot"></i>
+            <a href=""><i class="fas fa-user-cog"></i></a>
+            <a href=""><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+        </div>
+    </header>
+
+    <main class="general">
+        <section class="menu">
+            <div class="opciones">
+                <h1>Opciones</h1>
+                
+                <ul class="list">
+                    <li><a href=""><i class="fa-solid fa-cart-shopping"></i> Tienda</a></li>
+                    <li><a href=""><i class="fas fa-truck"></i> Mis ordenes</a></li>
+                    <li><a href=""><i class="fa-solid fa-file-invoice-dollar"></i> Facturas</a></li>
+                    <li><a href=""><i class="fas fa-file-contract"></i> TyC (legal)</a></li>
+                    <li><a href=""><i class="fa-solid fa-fingerprint"></i> P. Privacidad</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="tag-produc">
+            <div class="productos">
+                <h2>MoKaPuntos</h2>
+                <p>promociones</p>
+            </div>
+        </section>
+
+        <section class="tag-puntos">
+            <div class="puntos">
+                <h2><i class="fa-regular fa-gem"></i> MoKaPuntos</h2>
+                <p>232</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p style="font-weight: 400; color: white; font-size: 15px;">MOKAPOP MOMPOX 2025</p>
+        <p style="color: white; font-size: 0.85rem; font-weight: 500;">&copy; 2025 SCOLBOUX COLOMBIA S.A.S</p>
+
+        <div class="i-pago">
+            <i class="fa-solid fa-truck"></i>
+            <i class="fa-brands fa-cc-visa"></i>
+            <i class="fa-brands fa-cc-mastercard"></i>
+            <i class="fa-brands fa-cc-amex"></i>
+            <i class="fa-brands fa-apple-pay"></i>
+            <i class="fa-brands fa-google-pay"></i>
+        </div>
+    </footer>
+</body>
+</html>

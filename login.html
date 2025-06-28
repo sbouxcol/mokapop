@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicia Sesión - MoKaPop</title>
+    <link rel="shortcut icon" href="./img/mokap-ico.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+        body {
+            font-family: "Ubuntu", serif;
+            background-color: #effdff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Reset básico */
+        * {
+          box-sizing: border-box;
+        }
+
+        input:focus{
+            outline: none;
+        }
+
+        input::placeholder {
+            color: #04595c;
+        }
+
+
+        @media (min-width: 601px) {
+            .contenedor-pc {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 2rem; /* espacio entre el formulario y la imagen */
+                margin: 2rem;
+            }
+
+            .login-container {
+                width: 350px;
+            }
+
+            .login-container h2 {
+                text-align: center;
+                font-size: 1.7rem;
+                font-weight: 500;
+                color: #14878b;
+            }
+
+            .form-row {
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+            }
+            
+            .form-row input[type="text"],
+            .form-row input[type="password"] {
+                width: 50%;
+                text-align: center;
+                padding: 10px;
+                margin-bottom: 1rem;
+                background-color: #effdff;
+                color: #04595c;
+                border: 2px solid #14878b;
+                border-radius: 20px;
+                font-size: 15px;
+                font-weight: 400;
+                font-family: 'Ubuntu';
+            }
+
+            .login-container input[type="submit"] {
+                margin-bottom: 1rem;
+                padding: 10px;
+                width: -webkit-fill-available;
+                background-color: #14878b;
+                color: white;
+                font-size: 15px;
+                font-weight: 300;
+                font-family: inherit;
+                border: none;
+                border-radius: 30px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            .login-container input[type="submit"]:hover {
+                background-color: #9bd0d2;
+                color: #03494c; /* Cambia este color según el contraste que desees */
+            }
+
+            .opci-form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .prom-inf {
+                max-width: 400px;
+            }
+
+            .prom-inf img {
+                width: 100%;
+                height: auto;
+            }
+
+            .hedmk {
+                margin: 2rem;
+            }
+
+            .hedmk a {
+                font-weight: 700;
+                color: #14878b;
+                font-size: 30px;
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .hedmk img {
+                height: 70px;
+                width: auto;
+            }
+
+            .prom-inf {
+                margin: 2rem;
+                text-align: center;
+            }
+
+            .prom-inf img {
+                width: 100%;
+                border-radius: 20px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            }
+
+            .fotmk {
+                text-align: center;
+                background: #14878b;
+                padding: 10px;
+                color: white;
+                font-weight: 500;
+                font-size: 0.85rem;
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hedmk {
+                margin: 2rem;
+            }
+
+            .hedmk a {
+                font-weight: 700;
+                color: #14878b;
+                font-size: 20px;
+                text-decoration: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .hedmk img {
+                height: 50px;
+                width: auto;
+            }
+
+            .login-container {
+                width: 250px;
+                margin: 2rem auto;
+                margin-bottom: 3rem;
+            }
+            .login-container h2 {
+                text-align: center;
+                font-size: 1.7rem;
+                color: #14878b;
+                font-weight: 500;
+            }
+
+            .login-container input[type="text"],
+            .login-container input[type="password"] {
+                width: 100%;
+                padding: 1rem;
+                background-color: #effdff;
+                margin: 5px 0 15px;
+                text-align: center;
+                color: #04595c;
+                border: 1px solid #14878b;
+                border-radius: 20px;
+                font-size: 15px;
+                font-weight: 400;
+                font-family: 'Ubuntu';
+            }
+
+            .login-container input[type="submit"] {
+                width: 100%;
+                padding: 1rem;
+                background-color: #14878b;
+                color: white;
+                font-size: 18px;
+                font-weight: 400;
+                font-family: inherit;
+                border: none;
+                border-radius: 30px;
+                cursor: pointer;
+                margin-bottom: 2rem;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            .login-container input[type="submit"]:hover {
+                background-color: #9bd0d2;
+                color: #03494c; /* Cambia este color según el contraste que desees */
+            }
+
+            .opci-form {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .prom-inf {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+
+            .prom-inf img {
+                width: 70%;
+                height: auto;
+                border-radius: 20px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            }
+
+            .fotmk {
+                text-align: center;
+                background: #14878b;
+                padding: 1rem;
+                color: white;
+                font-weight: 500;
+                font-size: 0.85rem;
+            }
+        }
+        </style>
+</head>
+<body>
+<header>
+    <div class="hedmk">
+        <a href="./index.php"><img src="./img/mokap-ico.png" alt="MOKAPOP-LOG">MoKaPop</a>
+    </div>
+</header>
+
+<div class="contenedor-pc">
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form action="procesar_login.php" method="post">
+            <div class="form-row">
+                <input type="text" id="usuario" name="usuario" placeholder="usuario" required>
+                <input type="password" id="contrasena" name="contrasena" placeholder="contraseña" required>
+            </div>
+
+            <input type="submit" value="Ingresar">
+
+            <div class="opci-form">
+                <a href="/create-account" style="font-weight: 500; color: #03494c; margin-bottom: 10px; text-decoration: none;">¿Olvidó su contraseña?</a>
+                <span style="color: #14878b;">¿Aún no eres cliente? <a href="/create-account" style="font-weight: 500; color: #03494c;">Únete</a></span>
+            </div>
+        </form>
+    </div>
+
+    <div class="prom-inf">
+        <img src="./img/2.png" alt="PROM-INF-1">
+    </div>
+</div>
+
+<footer>
+    <div class="fotmk">
+        <p style="font-weight: 400;">MOKAPOP MOMPOX 2025</p>
+        <p>&copy; 2025 SCOLBOUX COLOMBIA S.A.S</p>
+    </div>
+</footer>
+
+</body>
+</html>
